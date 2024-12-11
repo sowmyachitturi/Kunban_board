@@ -1,0 +1,15 @@
+/* Search Bar inside header */
+.search-bar {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 250px;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}

@@ -1,0 +1,144 @@
+.task-card {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  max-height: 10vh;
+  overflow: hidden;
+}
+
+.task-card.dragging {
+  background: #e0e0e0;
+}
+
+.title-disc {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.task-card h3 {
+  margin: 0;
+  max-width: 33vh;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Rasa", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.task-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  max-height: 6vh;
+  max-width: 33vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Rasa", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.delete-task-btn,
+.view-task-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.delete-task-btn {
+  color: #ff5c5c;
+}
+
+.delete-task-btn:hover {
+  color: #e70000;
+  transform: scale(1.1);
+}
+
+.delete-task-btn::before {
+  content: '\f1f8';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+}
+
+.view-task-btn {
+  color: #4caf50;
+}
+
+.view-task-btn:hover {
+  color: #388e3c;
+}
+
+.view-task-btn i {
+  font-size: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+.close-modal-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  background-color: #e70000;
+}
